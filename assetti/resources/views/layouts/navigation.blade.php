@@ -21,6 +21,9 @@
                     <x-nav-link :href="route('equipments.index')" :active="request()->routeIs('equipments.*')">
                         {{ __('Equipamentos') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('maintenances.index')" :active="request()->routeIs('maintenances.*')">
+                        {{ __('Manutenções') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
                         {{ __('Categorias') }}
                     </x-nav-link>
@@ -87,6 +90,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('equipments.index')" :active="request()->routeIs('equipments.*')">
                 {{ __('Equipamentos') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('maintenances.index')" :active="request()->routeIs('maintenances.*')">
+                {{ __('Manutenções') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
                 {{ __('Categorias') }}

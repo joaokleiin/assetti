@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('maintenances', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('equipment_id')->constrained()->restrictOnDelete();
+            $table->foreignId('equipment_id')->constrained('equipments')->restrictOnDelete();
             $table->foreignId('user_id')->constrained()->restrictOnDelete();
             $table->string('maintenance_type');
             $table->text('problem_description');

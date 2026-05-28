@@ -43,10 +43,11 @@ class MaintenanceController extends Controller
         ]);
     }
 
-    public function create(): View
+    public function create(Request $request): View
     {
         return view('maintenances.create', [
             'maintenance' => new Maintenance([
+                'equipment_id' => $request->integer('equipment_id') ?: null,
                 'status' => Maintenance::STATUS_OPEN,
                 'maintenance_date' => now(),
             ]),
