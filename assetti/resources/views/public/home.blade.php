@@ -9,15 +9,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-5 gap-6">
                 <a href="{{ route('public.home') }}" class="flex items-center gap-3">
-                    <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-white font-bold">A</div>
+                    <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-white font-bold">AT</div>
                     <div>
                         <p class="text-lg font-semibold text-slate-900">AssetTI</p>
                     </div>
                 </a>
                 <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
                     <a href="{{ route('public.home') }}" class="hover:text-slate-900">Início</a>
-                    <a href="#equipamentos" class="hover:text-slate-900">Equipamentos</a>
-                    <a href="{{ route('login') }}" class="text-slate-900 hover:text-slate-700">Login</a>
                 </nav>
                 <div class="flex items-center gap-3">
                     <a href="{{ route('login') }}" class="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50">Login</a>
