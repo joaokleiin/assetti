@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-5 gap-6">
                 <a href="{{ route('public.home') }}" class="flex items-center gap-3">
-                    <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-white font-bold">AT</div>
+                    <img src="{{ asset('images/logo-at.jpeg') }}" alt="AssetTI Logo" class="h-10 w-auto max-w-[160px] object-contain sm:h-11" />
                     <div>
                         <p class="text-lg font-semibold text-slate-900">AssetTI</p>
                     </div>
