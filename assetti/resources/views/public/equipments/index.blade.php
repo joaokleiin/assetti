@@ -24,13 +24,13 @@
     <main class="flex-1 bg-slate-50 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div class="space-y-3">
-                <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                         <p class="text-sm uppercase tracking-[0.35em] text-sky-500">Consulta pública</p>
                         <h1 class="mt-3 text-3xl font-semibold text-slate-900 sm:text-4xl">Catálogo de equipamentos</h1>
                         <p class="mt-2 max-w-2xl text-sm leading-7 text-slate-600">Pesquise, filtre e visualize detalhes públicos dos ativos de TI com uma experiência responsiva e moderna.</p>
                     </div>
-                    <a href="{{ route('public.home') }}#equipamentos" class="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">Voltar para a home</a>
+                    <a href="{{ route('public.home') }}#equipamentos" class="inline-flex items-center rounded-full bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">Voltar para o Início</a>
                 </div>
 
                 @include('public.components.search-filters', [
