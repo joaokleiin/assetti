@@ -7,10 +7,13 @@ use App\Http\Controllers\EquipmentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MaintenanceController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PublicEquipmentController;
 use App\Http\Controllers\SectorController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('public.home');
+Route::get('/equipamentos', [PublicEquipmentController::class, 'index'])->name('public.equipments.index');
+Route::get('/equipamentos/{equipment}', [PublicEquipmentController::class, 'show'])->name('public.equipments.show');
 
 Route::middleware(['auth', 'verified'])
     ->prefix('admin')

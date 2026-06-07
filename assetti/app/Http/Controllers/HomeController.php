@@ -18,11 +18,29 @@ class HomeController extends Controller
         $totalSectors = Schema::hasTable('sectors') ? Sector::count() : 0;
         $totalMaintenances = Schema::hasTable('maintenances') ? Maintenance::count() : 0;
 
+        $recentEquipments = Schema::hasTable('equipments')
+            ? Equipment::query()
+                ->with(['category', 'brand', 'sector'])
+                ->latest()
+                ->take(4)
+                ->get()
+            : collect();
+
+        $recentMaintenances = Schema::hasTable('maintenances')
+            ? Maintenance::query()
+                ->with(['equipment', 'user'])
+                ->latest('maintenance_date')
+                ->take(4)
+                ->get()
+            : collect();
+
         return view('public.home', compact(
             'totalEquipments',
             'totalCategories',
             'totalSectors',
-            'totalMaintenances'
+            'totalMaintenances',
+            'recentEquipments',
+            'recentMaintenances'
         ));
     }
 }
