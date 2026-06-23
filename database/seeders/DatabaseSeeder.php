@@ -20,11 +20,9 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             BrandSeeder::class,
             SectorSeeder::class,
-        ]);
-
-        User::firstOrCreate(['email' => 'admin@assetti.local'], [
-            'name' => 'Admin AssetTI',
-            'password' => Hash::make('password'),
+            UserSeeder::class,
+            EquipmentSeeder::class,
+            MaintenanceSeeder::class,
         ]);
     }
 }

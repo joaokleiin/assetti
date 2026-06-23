@@ -12,7 +12,7 @@ class BrandSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach (['Dell', 'HP', 'Lenovo', 'Cisco', 'Samsung'] as $name) {
+        foreach (['Dell', 'Lenovo', 'HP', 'Samsung', 'Epson', 'LG', 'Intelbras'] as $name) {
             Brand::updateOrCreate(['name' => $name]);
         }
     }

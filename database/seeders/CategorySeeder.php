@@ -13,11 +13,13 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            ['name' => 'Computadores', 'description' => 'Estações de trabalho de uso corporativo.'],
-            ['name' => 'Notebooks', 'description' => 'Equipamentos portáteis utilizados por colaboradores.'],
-            ['name' => 'Impressoras', 'description' => 'Dispositivos para impressão e digitalização.'],
-            ['name' => 'Switches', 'description' => 'Equipamentos de rede para comunicação local.'],
-            ['name' => 'Monitores', 'description' => 'Telas e monitores auxiliares.'],
+            ['name' => 'Notebook', 'description' => 'Equipamentos portáteis para uso corporativo.'],
+            ['name' => 'Desktop', 'description' => 'Estações de trabalho fixas de alto desempenho.'],
+            ['name' => 'Monitor', 'description' => 'Monitores e telas de apoio para estações de trabalho.'],
+            ['name' => 'Impressora', 'description' => 'Equipamentos de impressão e digitalização.'],
+            ['name' => 'Servidor', 'description' => 'Servidores de rede e armazenamento.'],
+            ['name' => 'Projetor', 'description' => 'Projetores para apresentações e treinamentos.'],
+            ['name' => 'Switch', 'description' => 'Equipamentos de rede para distribuição de conectividade.'],
         ];
 
         foreach ($categories as $category) {

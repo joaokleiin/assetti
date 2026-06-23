@@ -14,9 +14,11 @@ class SectorSeeder extends Seeder
     {
         $sectors = [
             ['name' => 'Tecnologia da Informação', 'responsible' => 'Ana Souza', 'location' => 'Bloco A'],
-            ['name' => 'Financeiro', 'responsible' => 'Carlos Lima', 'location' => 'Bloco B'],
-            ['name' => 'Recursos Humanos', 'responsible' => 'Mariana Alves', 'location' => 'Bloco C'],
-            ['name' => 'Operações', 'responsible' => 'Rafael Martins', 'location' => 'Bloco D'],
+            ['name' => 'Recursos Humanos', 'responsible' => 'Carla Mendes', 'location' => 'Bloco B'],
+            ['name' => 'Financeiro', 'responsible' => 'Bruno Costa', 'location' => 'Bloco C'],
+            ['name' => 'Compras', 'responsible' => 'Mariana Guerra', 'location' => 'Bloco D'],
+            ['name' => 'Administração', 'responsible' => 'Patrícia Santos', 'location' => 'Bloco E'],
+            ['name' => 'Jurídico', 'responsible' => 'Ricardo Alves', 'location' => 'Bloco F'],
         ];
 
         foreach ($sectors as $sector) {
