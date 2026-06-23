@@ -5,11 +5,17 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <div class="flex items-center gap-3">
-                            <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                            <span class="text-lg font-semibold text-gray-900">AssetTI</span>
-                        </div>
+                    <a href="{{ route('dashboard') }}" class="inline-flex items-center gap-3 text-slate-900">
+                        <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-sky-100 text-sky-700 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="5" width="18" height="12" rx="2" />
+                                <path d="M8 21h8" />
+                                <path d="M12 17v4" />
+                            </svg>
+                        </span>
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">
+                            <span class="text-sky-600">Asset</span><span class="text-slate-900">TI</span>
+                        </span>
                     </a>
                 </div>
 
