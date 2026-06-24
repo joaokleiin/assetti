@@ -1,59 +1,254 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# AssetTI
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistema web para gerenciamento de ativos de Tecnologia da Informação, desenvolvido como projeto semestral da disciplina de Desenvolvimento Web utilizando Laravel.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Sobre o Projeto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+O **AssetTI** é uma plataforma de gestão de ativos de TI que permite o controle de equipamentos, categorias, marcas, setores e manutenções, oferecendo uma área administrativa completa e uma área pública para consulta de informações.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+O objetivo do sistema é centralizar o gerenciamento de ativos de tecnologia de uma organização, facilitando o acompanhamento do patrimônio e do histórico de manutenções.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Tecnologias Utilizadas
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* PHP 8
+* Laravel 12
+* Blade
+* Tailwind CSS
+* MySQL
+* JavaScript
+* Chart.js
+* Eloquent ORM
+* Git e GitHub
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Funcionalidades
 
-### Premium Partners
+### Autenticação
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* Login de usuários;
+* Cadastro de usuários;
+* Logout;
+* Proteção de rotas administrativas.
 
-## Contributing
+### Gestão de Equipamentos
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Cadastro de equipamentos;
+* Edição de equipamentos;
+* Exclusão de equipamentos;
+* Pesquisa e filtros;
+* Visualização detalhada.
 
-## Code of Conduct
+### Gestão de Categorias
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Cadastro;
+* Edição;
+* Exclusão.
 
-## Security Vulnerabilities
+### Gestão de Setores
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* Cadastro;
+* Edição;
+* Exclusão.
 
-## License
+### Gestão de Marcas
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Cadastro;
+* Edição;
+* Exclusão.
+
+### Gestão de Manutenções
+
+* Cadastro de manutenções;
+* Histórico por equipamento;
+* Controle de status;
+* Filtros de consulta.
+
+### Dashboard Administrativo
+
+* Indicadores do sistema;
+* Equipamentos por status;
+* Equipamentos por categoria;
+* Manutenções por mês;
+* Gráficos interativos.
+
+### Área Pública
+
+* Página inicial;
+* Catálogo público de equipamentos;
+* Pesquisa e filtros;
+* Visualização dos detalhes dos equipamentos.
+
+### Relatórios
+
+* Relatórios filtrados;
+* Exportação em PDF.
+
+### API JSON
+
+Endpoints para consulta de:
+
+* Equipamentos;
+* Categorias;
+* Setores;
+* Marcas;
+* Manutenções.
+
+---
+
+## Modelagem do Banco de Dados
+
+Entidades principais:
+
+* Usuários
+* Equipamentos
+* Categorias
+* Marcas
+* Setores
+* Manutenções
+
+Relacionamentos:
+
+* Um equipamento pertence a uma categoria;
+* Um equipamento pertence a uma marca;
+* Um equipamento pertence a um setor;
+* Um equipamento possui várias manutenções.
+
+---
+
+## Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/joaokleiin/assetti.git
+```
+
+Entre na pasta:
+
+```bash
+cd assetti
+```
+
+Instale as dependências:
+
+```bash
+composer install
+npm install
+```
+
+Copie o arquivo de ambiente:
+
+```bash
+cp .env.example .env
+```
+
+Gere a chave da aplicação:
+
+```bash
+php artisan key:generate
+```
+
+Configure o banco de dados no arquivo `.env`.
+
+Execute as migrations:
+
+```bash
+php artisan migrate
+```
+
+Ou recrie o banco com dados de demonstração:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+Inicie o servidor:
+
+```bash
+php artisan serve
+```
+
+---
+
+## Usuário de Demonstração
+
+Caso os seeders estejam habilitados:
+
+```text
+E-mail: admin@assetti.com
+Senha: password
+```
+
+*(Altere conforme configurado no seu UserSeeder.)*
+
+---
+
+## Endpoints da API
+
+### Equipamentos
+
+```http
+GET /api/equipments
+GET /api/equipments/{id}
+```
+
+### Categorias
+
+```http
+GET /api/categories
+```
+
+### Marcas
+
+```http
+GET /api/brands
+```
+
+### Setores
+
+```http
+GET /api/sectors
+```
+
+### Manutenções
+
+```http
+GET /api/maintenances
+```
+
+---
+
+## 📸 Funcionalidades Principais
+
+* Área administrativa completa;
+* Área pública para visitantes;
+* Dashboard com gráficos;
+* Relatórios em PDF;
+* API REST em JSON;
+* Sistema responsivo.
+
+---
+
+## Autor
+
+**João Arthur Klein**
+
+Graduando em Análise e Desenvolvimento de Sistemas – Universidade de Passo Fundo (UPF).
+
+---
+
+## Projeto Acadêmico
+
+Projeto desenvolvido para fins acadêmicos na disciplina de Desenvolvimento Web, aplicando conceitos de:
+
+* Laravel;
+* Banco de Dados Relacional;
+* Desenvolvimento Full Stack;
+* Modelagem de Dados;
+* APIs REST;
+* Boas práticas de programação.
