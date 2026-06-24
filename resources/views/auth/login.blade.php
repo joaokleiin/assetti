@@ -6,39 +6,56 @@
         @csrf
 
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="mt-2" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <label for="email" class="block text-sm font-medium text-slate-700">E-mail</label>
+            <div class="relative mt-2">
+                <div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+                    <!-- Mail Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.94 6.34A2 2 0 014 6h12a2 2 0 011.06.34L10 11 2.94 6.34z" />
+                        <path d="M18 8.12V14a2 2 0 01-2 2H4a2 2 0 01-2-2V8.12l7.44 4.47a2 2 0 002.12 0L18 8.12z" />
+                    </svg>
+                </div>
+                <x-text-input id="email" class="mt-0 pl-10" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            </div>
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <div>
-            <x-input-label for="password" :value="__('Senha')" />
-            <x-text-input id="password" class="mt-2" type="password" name="password" required autocomplete="current-password" />
+            <label for="password" class="block text-sm font-medium text-slate-700">Senha</label>
+            <div class="relative mt-2">
+                <div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+                    <!-- Lock Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 8V6a5 5 0 1110 0v2h1a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2v-6a2 2 0 012-2h1zm2-2a3 3 0 116 0v2H7V6z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <x-text-input id="password" class="mt-0 pl-10" type="password" name="password" required autocomplete="current-password" />
+            </div>
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <div class="flex items-center justify-between">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="h-4 w-4 rounded border-slate-300 text-sky-600 focus:ring-sky-400" name="remember">
-                <span class="ml-2 text-sm text-slate-600">{{ __('Lembrar-me') }}</span>
+                <span class="ml-2 text-sm text-slate-600">Lembrar-me</span>
             </label>
 
             <div class="text-sm">
                 @if (Route::has('password.request'))
-                    <a class="font-medium text-sky-500 hover:text-sky-400" href="{{ route('password.request') }}">{{ __('Esqueceu sua senha?') }}</a>
+                    <a class="font-medium text-sky-600 hover:text-sky-500 transition" href="{{ route('password.request') }}">Esqueceu sua senha?</a>
                 @endif
             </div>
         </div>
 
         <div>
             <x-primary-button>
-                {{ __('Entrar') }}
+                Entrar
             </x-primary-button>
         </div>
 
         <div class="pt-4 text-center text-sm text-slate-600">
             @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="text-sky-500 hover:text-sky-400">Criar conta</a>
+                <a href="{{ route('register') }}" class="text-sky-600 hover:text-sky-500 transition">Criar conta</a>
             @endif
         </div>
     </form>
