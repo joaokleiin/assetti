@@ -15,36 +15,34 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-slate-900 antialiased bg-gradient-to-b from-sky-50 via-slate-50 to-slate-100">
-        <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-            <div class="w-full max-w-5xl">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                    <div class="hidden lg:flex items-center justify-center">
-                        <div class="max-w-md rounded-2xl bg-gradient-to-br from-sky-700 to-slate-900 p-8 text-white shadow-2xl transform -rotate-1">
-                            <div class="flex items-center gap-3">
-                                <div class="text-3xl font-extrabold tracking-tight">Asset<span class="text-sky-200">TI</span></div>
-                            </div>
-                            <h2 class="mt-4 text-2xl font-semibold">Sistema de Gestão de Ativos de TI</h2>
-                            <p class="mt-4 text-sm text-sky-100/90">Gerencie equipamentos, categorias, setores e histórico de manutenções com segurança.</p>
-                        </div>
+        <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-100">
+            <div class="w-full max-w-[1000px] h-[650px] rounded-3xl shadow-2xl overflow-hidden border border-slate-200 bg-white flex flex-col md:flex-row">
+                <!-- Left column (visual) -->
+                <div class="w-full md:w-1/2 bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] text-white p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl font-extrabold tracking-tight">Asset<span class="text-sky-300">TI</span></div>
+                        <h2 class="mt-6 text-2xl font-semibold">Sistema de Gestão de Ativos de TI</h2>
+                        <p class="mt-4 text-sm text-sky-100/90">Gerencie equipamentos, categorias, setores e manutenções em um único ambiente.</p>
                     </div>
 
-                    <div class="flex items-center justify-center lg:col-start-2">
-                        <div class="w-full max-w-md sm:max-w-lg mx-4">
-                            <div class="bg-white border border-slate-200 rounded-2xl shadow-xl p-8 transition-transform hover:scale-[1.01]">
-                                <div class="mb-6 text-center">
-                                    <a href="{{ route('public.home') }}" class="inline-flex items-center justify-center">
-                                        <div class="text-2xl font-bold text-slate-900">Asset<span class="text-sky-500">TI</span></div>
-                                    </a>
-                                    <h3 class="mt-3 text-lg font-semibold text-slate-900">Sistema de Gestão de Ativos de TI</h3>
-                                    <p class="mt-1 text-sm text-slate-500">Acesse sua conta para continuar</p>
-                                </div>
+                    <div class="mt-6">
+                        @if(request()->routeIs('login'))
+                            <a href="{{ route('register') }}" class="inline-block px-6 py-3 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 transition">Criar conta</a>
+                        @elseif(request()->routeIs('register'))
+                            <a href="{{ route('login') }}" class="inline-block px-6 py-3 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 transition">Entrar</a>
+                        @else
+                            <a href="{{ route('login') }}" class="inline-block px-6 py-3 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 transition">Entrar</a>
+                        @endif
+                    </div>
+                </div>
 
-                                {{ $slot }}
+                <!-- Right column (form) -->
+                <div class="w-full md:w-1/2 bg-white p-8 flex items-center justify-center">
+                    <div class="w-full max-w-md">
+                        {{ $slot }}
 
-                                <div class="mt-6 text-center text-sm">
-                                    <a href="{{ route('public.home') }}" class="text-slate-600 hover:text-slate-900">Voltar para a Home Pública</a>
-                                </div>
-                            </div>
+                        <div class="mt-6 text-center text-sm">
+                            <a href="{{ route('public.home') }}" class="text-slate-600 hover:text-slate-900">Voltar para a Home Pública</a>
                         </div>
                     </div>
                 </div>
